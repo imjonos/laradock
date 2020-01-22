@@ -64,6 +64,8 @@ RUN set -xe; \
     usermod -p "*" laradock -s /bin/bash && \
     apt-get install -yqq \
       apt-utils \
+
+
       #
       #--------------------------------------------------------------------------
       # Mandatory Software's Installation
@@ -93,6 +95,11 @@ RUN set -xe; \
 #   - INSTALL_NODE=false
 #   - ...
 #
+RUN apt-get install -y software-properties-common && \
+    add-apt-repository ppa:certbot/certbot && \
+    apt-get update -yqq && \
+    apt-get install -y python-certbot-apache && \
+    apt-get install -y mc
 
 ###########################################################################
 # Set Timezone

@@ -834,7 +834,7 @@ services:
         - ./data/certbot/certs/:/var/certs
         - ./certbot/letsencrypt/:/var/www/letsencrypt
       environment:
-        - CN=domain.ru
+        - CN=${CERTBOT_CN}
         - EMAIL=info@coders.studio
       networks:
         - frontend

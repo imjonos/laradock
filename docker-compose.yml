@@ -834,7 +834,7 @@ services:
         - ./data/certbot/certs/:/var/certs
         - ./certbot/letsencrypt/:/var/www/letsencrypt
       environment:
-        - CN=skladno.voltsoft.ru
+        - CN=domain.ru
         - EMAIL=info@coders.studio
       networks:
         - frontend
